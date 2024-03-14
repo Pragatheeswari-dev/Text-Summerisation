@@ -1,0 +1,11 @@
+langchain
+python-dotenv
+streamlit
+unstructured
+tiktoken
+faiss-cpu==1.7.4
+libmagic
+#python-magic
+#python-magic-bin
+OpenAI
+langchain-community
