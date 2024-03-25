@@ -9,3 +9,4 @@ libmagic
 #python-magic-bin
 OpenAI
 langchain-community
+langchain_openai
