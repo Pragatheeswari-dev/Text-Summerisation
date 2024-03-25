@@ -14,8 +14,8 @@ import openai
 from langchain_community.llms import OpenAI
 
 from dotenv import load_dotenv
-load_dotenv()  # take environment variables from .env (especially openai api key)
-
+#load_dotenv()  # take environment variables from .env (especially openai api key)
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 #from dotenv import load_dotenv,find_dotenv
 #load_dotenv(find_dotenv())
 #OpenAI_key = os.environ.get("OPEN_AI_KEY")
