@@ -22,7 +22,8 @@ from langchain.chains import create_tagging_chain, create_tagging_chain_pydantic
 # from langchain_openai import ChatOpenAI
 from langchain_core.pydantic_v1 import BaseModel, Field
 from dotenv import load_dotenv
-load_dotenv()  # take environment variables from .env (especially openai api key)
+# load_dotenv()  # take environment variables from .env (especially openai api key)
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 #from dotenv import load_dotenv,find_dotenv
 #load_dotenv(find_dotenv())
