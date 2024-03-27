@@ -100,7 +100,7 @@ default_urls = [
 # st.subheader("Try It Out:")
 st.write("Paste the URL(s) of news articles you want to analyse below, or use the sample URLs provided:")
 
-url_input = st.text_area("URL(s)", value="\n".join(default_urls), height=200, width = 500, help="Enter one or more news article URLs separated by line breaks. You can also use the sample URLs provided below.")
+url_input = st.text_area("URL(s)", value="\n".join(default_urls), height=200, help="Enter one or more news article URLs separated by line breaks. You can also use the sample URLs provided below.")
 urls = []
 for url in url_input.split("\n"):
         if url.strip() != "":
