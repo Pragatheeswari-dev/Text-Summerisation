@@ -176,7 +176,7 @@ class Tags(BaseModel):
 # query = main_placeholder.text_input("Question: ")
 default_q = ["Why does Gov say about Olympic?",
                  "Why did the author die?",
-                 "What does the report say about common wealth games?",
+                 "What does the report say about commonwealth games?",
                  "coronavirus news?"]
 col1, col2 = st.columns(2)
 with col1:
