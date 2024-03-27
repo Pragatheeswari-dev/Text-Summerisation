@@ -46,10 +46,14 @@ st.sidebar.write(
          - The Title, Author Name, and Date were retrieved from the URL using the **'BeautifulSoup'**, a package commonly used for web scrapping.
        
         ### Further optimisation:
-        - with enough vector database storage and GPU resources, LLM can be optimised for several use cases.
+        - **Multiple Pre-trained LLMs** for specific tasks are published every week with their benchmarking results. with enough vector database storage and GPU resources, these LLMs can be optimised for several use cases.
+        
             - **Multiple Pre-trained LLMs** for specific tasks are published every week with their benchmarking results.
+            
             - **Community Well-being**: Summarizing public health articles to provide timely updates and recommendations for community health and safety.
+            
             - **Policy Development**: Analyzing and summarizing policy documents to identify key issues and trends, facilitating evidence-based decision-making.
+            
             - **Governance**: Summarizing news articles and reports related to government activities and public affairs to monitor public sentiment and inform policy responses.
 
          
