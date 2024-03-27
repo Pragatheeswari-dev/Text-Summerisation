@@ -186,7 +186,7 @@ default_q = ["What does the report say about Commonwealth games?",
 
 col1,col2 = st.columns(2)    
 with col1:
-        query = st.text_input("Question: ")
+        time.sleep(2)
 with col2:
         with st.popover("Sample questions to try"):
                 sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
@@ -200,7 +200,7 @@ with col2:
 #     sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
 
 
-# query = st.text_input("Question: ")
+query = st.text_input("Question: ")
 generate_answer_clicked = st.button("Generate Answer")
 
 if query:
