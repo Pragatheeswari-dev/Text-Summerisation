@@ -179,8 +179,8 @@ default_q = ["Why did the author die?",
              "coronavirus news?"]
 col1 = st.columns(1)    
 with col1:
-    with st.popover("Sample questions to try"):
-        sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
+        with st.popover("Sample questions to try"):
+                sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
 
 # with st.popover("Sample questions to try"):
 #     sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
