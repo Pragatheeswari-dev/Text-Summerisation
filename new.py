@@ -115,7 +115,7 @@ main_placeholder = st.empty()
 llm = OpenAI(temperature=0, max_tokens=500)
 
 def text_preprocessing(u):
-   main_placeholder.text("Data Loading...Started...✅✅✅")
+   #main_placeholder.text("Data Loading...Started...✅✅✅")
    loaders = UnstructuredURLLoader(u)
    data = loaders.load()
    print(len(data))
@@ -153,6 +153,7 @@ if process_url_clicked:
     time.sleep(2)
 
     vectorstore_openai.save_local("faiss_store")
+    main_placeholder.text("Enter the question...✅✅✅")
 
     # Save the FAISS index to a pickle file
     #with open(file_path, "wb") as f:
@@ -178,7 +179,7 @@ default_q = ["Why did the author die?",
              "coronavirus news?"]
 col1, col2 = st.columns(2)
 with col1:
-    main_placeholder.text("Enter the question...✅✅✅")
+    
 with col2:
     with st.popover("Sample questions to try"):
         sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
@@ -194,6 +195,7 @@ if query:
     vectorstore_openai = FAISS.load_local("faiss_store", OpenAIEmbeddings(),allow_dangerous_deserialization = True)
     chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever = vectorstore_openai.as_retriever())
     #chain = RetrievalQAWithSourcesChain.from_llm(llm = llm, retriever = vectorstore_openai.as_retriever())
+    
     result = chain({"question": query}, return_only_outputs=True)
     # result will be a dictionary of this format --> {"answer": "", "sources": [] }
     st.header("Answer")
