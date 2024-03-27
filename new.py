@@ -175,7 +175,7 @@ class Tags(BaseModel):
 
 
 # query = main_placeholder.text_input("Question: ")
-default_q = ["Whats  the Gov news about Olymbics?",
+default_q = ["Whats  the Gov news about Olympics?",
         "Why did the author die?",
              "What does the report say about Commonwealth games?",
              "coronavirus news?"]
