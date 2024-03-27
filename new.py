@@ -22,7 +22,7 @@ from langchain.chains import create_tagging_chain, create_tagging_chain_pydantic
 # from langchain_openai import ChatOpenAI
 from langchain_core.pydantic_v1 import BaseModel, Field
 from dotenv import load_dotenv
-# load_dotenv()  # take environment variables from .env (especially openai api key)
+# load_dotenv()  # take environment variables from .env (especially open API key)
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 #from dotenv import load_dotenv,find_dotenv
@@ -32,16 +32,22 @@ os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 st.sidebar.title("About:")
 st.sidebar.write(
         """
-        This demo tool is designed to answer the questions efficiently and save time reading through lengthy articles. 
-         - It is implemented using *LangChain framework*. 
-         - Data from the url is loaded and splitted into desired chunks, then embeddings are generated and stored in the vector database.
-         - Faiss, provides both storage and optimised methods for performing similarity search on on high-dimensional vectors.
-         - To generate answer, *gpt-3.5-turbo-instruct* model from openAI is used.
-         - Articles are also *tagged for sentiments, aggressiveness, language, style* using openai.
-         - Title, Author Name, Date where retrived from the url using *'BeautifulSoup'* package commomly used for web scrapping.
+        This demo tool is designed to answer the questions efficiently and save time reading lengthy articles.  
+         - It is implemented using the **LangChain framework**.  
+         
+         - Data from the URL is loaded and split into desired chunks, and then embeddings are generated and stored in Faiss, a vector database.
+         
+         - Faiss, provides both storage and optimised methods for performing similarity searches on high-dimensional vectors.
+         
+         - To generate answer, **gpt-3.5-turbo-instruct** LLM model from openAI is used.
+         
+         - Articles are also *tagged for sentiments, aggressiveness, language, and style* using openai.
+         
+         - The Title, Author Name, and Date were retrieved from the URL using the **'BeautifulSoup'**, a package commonly used for web scrapping.
        
         ### Further optimisation:
-        - with enough vector database storages and GPU resources , LLM can be optimised for several usecases.
+        - with enough vector database storage and GPU resources, LLM can be optimised for several use cases.
+            - **Multiple Pre-trained LLMs** for specific tasks are published every week with their benchmarking results.
             - **Community Well-being**: Summarizing public health articles to provide timely updates and recommendations for community health and safety.
             - **Policy Development**: Analyzing and summarizing policy documents to identify key issues and trends, facilitating evidence-based decision-making.
             - **Governance**: Summarizing news articles and reports related to government activities and public affairs to monitor public sentiment and inform policy responses.
