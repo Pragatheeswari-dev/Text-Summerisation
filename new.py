@@ -177,9 +177,7 @@ class Tags(BaseModel):
 default_q = ["Why did the author die?",
              "What does the report say about Commonwealth games?",
              "coronavirus news?"]
-col1, col2 = st.columns(2)
-with col1:
-    
+col1, col2 = st.columns(2)    
 with col2:
     with st.popover("Sample questions to try"):
         sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
