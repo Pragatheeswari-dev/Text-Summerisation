@@ -110,14 +110,8 @@ default_q = ["What does the report say about Commonwealth games?",
              "Why did the author die?",
              "Whats  the Gov news about Olymbics?",
              "coronavirus news?"]
-col1,col2 = st.columns(2)    
-with col1:
-        process_url_clicked = st.button("Process URLs")
-with col2:
-        with st.popover("Sample questions to try"):
-                sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
 
-# process_url_clicked = st.button("Process URLs")
+process_url_clicked = st.button("Process URLs")
 #file_path = "faiss_store_openai.pkl"
 
 main_placeholder = st.empty()
@@ -185,10 +179,18 @@ class Tags(BaseModel):
 
 
 # query = main_placeholder.text_input("Question: ")
-# default_q = ["What does the report say about Commonwealth games?",
-#              "Why did the author die?",
-#              "Whats  the Gov news about Olymbics?",
-#              "coronavirus news?"]
+default_q = ["What does the report say about Commonwealth games?",
+             "Why did the author die?",
+             "Whats  the Gov news about Olymbics?",
+             "coronavirus news?"]
+
+col1,col2 = st.columns(2)    
+with col1:
+        query = st.text_input("Question: ")
+with col2:
+        with st.popover("Sample questions to try"):
+                sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
+
 # col1 = st.columns(1)    
 # with col1:
 # with st.popover("Sample questions to try"):
@@ -198,7 +200,7 @@ class Tags(BaseModel):
 #     sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
 
 
-query = st.text_input("Question: ")
+# query = st.text_input("Question: ")
 generate_answer_clicked = st.button("Generate Answer")
 
 if query:
