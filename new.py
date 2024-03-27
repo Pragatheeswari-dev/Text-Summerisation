@@ -100,7 +100,7 @@ default_urls = [
 # st.subheader("Try It Out:")
 st.write("Paste the URL(s) of news articles you want to analyse below, or use the sample URLs provided:")
 
-url_input = st.text_area("URL(s)", value="\n".join(default_urls), height=200, help="Enter one or more news article URLs separated by line breaks. You can also use the sample URLs provided below.")
+url_input = st.text_area("URL(s)", value="\n".join(default_urls), height=200, width = 500, help="Enter one or more news article URLs separated by line breaks. You can also use the sample URLs provided below.")
 urls = []
 for url in url_input.split("\n"):
         if url.strip() != "":
@@ -183,7 +183,7 @@ with col1:
     main_placeholder.text("Enter the question...✅✅✅")
 with col2:
     with st.popover("Sample questions to try"):
-        sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
+        sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=120, help="Enter any questions or copy&pasate one from below.")
 
 # with st.popover("Sample questions to try"):
 #     sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
