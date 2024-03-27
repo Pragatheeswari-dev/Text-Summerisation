@@ -117,7 +117,7 @@ with col2:
         with st.popover("Sample questions to try"):
                 sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
 
-process_url_clicked = st.button("Process URLs")
+# process_url_clicked = st.button("Process URLs")
 #file_path = "faiss_store_openai.pkl"
 
 main_placeholder = st.empty()
