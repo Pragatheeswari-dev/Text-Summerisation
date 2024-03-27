@@ -89,7 +89,6 @@ st.subheader("Try It Out:")
 
 
 default_urls = [  
-    "https://www.governmentnews.com.au/queensland-says-no-to-new-olympic-stadium/",
     "https://www.news.com.au/entertainment/celebrity-life/celebrity-deaths/ive-sadly-diedbestselling-author-announces-own-death/news-story/f7b145a9070d832b43946a126cfc3e4e",
     "https://www.governmentnews.com.au/report-finds-failings-all-round-in-victorias-commonwealth-games-debacle/",
    #  "https://www.pm.gov.au/media/parents-and-economy-benefit-latest-reform",
@@ -174,10 +173,9 @@ class Tags(BaseModel):
 
 
 # query = main_placeholder.text_input("Question: ")
-default_q = ["Why does Gov say about Olympic?",
-                 "Why did the author die?",
-                 "What does the report say about commonwealth games?",
-                 "coronavirus news?"]
+default_q = ["Why did the author die?",
+             "What does the report say about Commonwealth games?",
+             "coronavirus news?"]
 col1, col2 = st.columns(2)
 with col1:
     main_placeholder.text("Enter the question...✅✅✅")
