@@ -106,7 +106,10 @@ for url in url_input.split("\n"):
         if url.strip() != "":
             urls.append(url)
 print("url: ", urls)
-
+default_q = ["What does the report say about Commonwealth games?",
+             "Why did the author die?",
+             "Whats  the Gov news about Olymbics?",
+             "coronavirus news?"]
 col1,col2 = st.columns(2)    
 with col1:
         process_url_clicked = st.button("Process URLs")
@@ -182,10 +185,10 @@ class Tags(BaseModel):
 
 
 # query = main_placeholder.text_input("Question: ")
-default_q = ["What does the report say about Commonwealth games?",
-             "Why did the author die?",
-             "Whats  the Gov news about Olymbics?",
-             "coronavirus news?"]
+# default_q = ["What does the report say about Commonwealth games?",
+#              "Why did the author die?",
+#              "Whats  the Gov news about Olymbics?",
+#              "coronavirus news?"]
 # col1 = st.columns(1)    
 # with col1:
 # with st.popover("Sample questions to try"):
