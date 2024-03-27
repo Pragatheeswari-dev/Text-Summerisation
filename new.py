@@ -107,6 +107,13 @@ for url in url_input.split("\n"):
             urls.append(url)
 print("url: ", urls)
 
+col1,col2 = st.columns(2)    
+with col1:
+        process_url_clicked = st.button("Process URLs")
+with col2:
+        with st.popover("Sample questions to try"):
+                sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
+
 process_url_clicked = st.button("Process URLs")
 #file_path = "faiss_store_openai.pkl"
 
@@ -175,14 +182,14 @@ class Tags(BaseModel):
 
 
 # query = main_placeholder.text_input("Question: ")
-default_q = ["Whats  the Gov news about Olympics?",
-        "Why did the author die?",
-             "What does the report say about Commonwealth games?",
+default_q = ["What does the report say about Commonwealth games?",
+             "Why did the author die?",
+             "Whats  the Gov news about Olymbics?",
              "coronavirus news?"]
 # col1 = st.columns(1)    
 # with col1:
-with st.popover("Sample questions to try"):
-        sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
+# with st.popover("Sample questions to try"):
+#         sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=140, help="Enter any questions or copy&pasate one from below.")
 
 # with st.popover("Sample questions to try"):
 #     sample_q = st.text_area("Sample questions to try",value="\n".join(default_q), height=100, help="Enter any questions or copy&pasate one from below.")
